@@ -42,6 +42,7 @@
                 </div>
                 }
             </div>
+            </div>
             <div class="main-speed">
                 <div class="main-block-title">Скорость доставки</div>
 
@@ -55,7 +56,6 @@
                     }
                 </div>
             </div>
-        </div>
         <div class="main-calculate-block">
             <button id="calc" class="button calculate-button" type="button" [disabled]="routeForm.invalid" (click)="calculate()">Рассчитать</button>
         </div>
@@ -99,7 +99,7 @@
             <div class="main-order-success" id="orderSuccess" [class.is-visible]="orderId()">
                 <div class="main-success-icon">✓</div>
                 <div class="main-success-title">Заявка отправлена!</div>
-                <div class="main-success-title">Номер отправления – <span id="orderId">((orderId()))</span></div>
+                <div class="main-success-title">Номер отправления – <span id="orderId">{{orderId()}}</span></div>
                 <div class="main-success-subtitle">Мы скоро свяжемся с вами</div>
             </div>
         </div>
